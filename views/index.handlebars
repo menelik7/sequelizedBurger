@@ -1,0 +1,55 @@
+<h1>Eat-Da-Burger!</h1>
+
+<div class="container">
+  <div class="row">
+
+    <div {{!-- class="col-lg-12" --}}>
+      <form action="/burgers" method="POST">
+        <div class="form-group">
+          <input type="text" id="bg" name="burger_name" placeholder="mmm" required>
+          <button class="btn btn-primary" type="submit" id="order">Place your Order</button>
+          <p>Enter the burger of your desire and speed-up your journey to a Coronary Bypass</p>
+        </div>
+      </form>
+    </div>
+
+    <div {{!-- class="col-lg-6 col-md-6 col-sm-12" --}} id="ordered">
+      <ol>
+        {{#each burgers}}
+          {{#unless this.devoured}}
+            <div class="whatev">
+              <li>
+                {{!-- {{this.id}}. --}}
+                {{this.burger_name}}
+                <form action="/{{this.id}}?_method=PUT" method="POST">
+                  <input type="text" name="customerName" placeholder="Enter your name and" required>
+                  <button type="submit" id="submit">Devour it!</button>
+                </form>
+              </li>
+            </div>
+          {{/unless}}
+        {{/each}}
+      </ol>
+    </div>
+
+    <div {{!-- class="col-lg-6 col-md-6 col-sm-12" --}} id="devoured">
+      <ol>
+        {{#each burgers}}
+          {{#if this.devoured}}
+            <div class="whatev">
+              <li>
+                {{!-- {{this.id}}. --}}
+                {{this.burger_name}} - devoured by {{this.Customer.customer_name}}
+              </li>
+            </div>
+          {{/if}}
+        {{/each}}
+      </ol>
+    </div>
+
+  </div>
+</div>
+
+
+
+

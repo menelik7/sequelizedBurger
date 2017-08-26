@@ -1,0 +1,59 @@
+html { 
+  background: url("../img/1.jpg") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+body {
+	color: #fff;
+	text-align: center;
+	background: none;
+}
+
+.container {
+	padding: 0 100px 0 100px;
+}
+
+p {
+	margin-bottom: 50px;
+}
+
+ol {
+	padding: 15px;
+}
+
+.whatev {
+	background: #fff;
+	padding-left: 15px;
+}
+li {
+	padding: 5px 15px;
+	margin: 10px;
+	text-align: left;
+	color: black;
+	min-width: 200px;
+}
+
+#submit {
+	margin-top: 5px;
+}
+
+#ordered {
+	float: left;
+}
+
+#devoured {
+	float: right;
+}
+
+.create-update-form {
+	padding: 5px;
+	margin: 5px;
+	/*background: aqua;*/
+}
+
+.form-group {
+	margin-bottom: 5px;
+}
