@@ -12,7 +12,7 @@ module.exports = function(sequelize, DataTypes) {
     // Associating Customer with Burger
     // Customer may consume many burgers
     Customer.hasMany(models.Burger, {
-      // When a burger is deleted, also delete any associated customers
+      // When a customer is deleted, also delete any associated burgers
       onDelete: "cascade"
     });
   }
